@@ -2,8 +2,7 @@
 
 Templates for testing deployment onto Kubernetes clusters with Cloud Application Manager.
 
-Each directory is a different deployment, with multiple template files. There
-is a .yaml file with the same name that also includes the same templates but concatenated.
+Each deployment has a directory with multiple template files, and a single-file version of the concatenated templates here in this upper level directory.
 
 You can import these templates directly into Cloud Application Manager by:
 
