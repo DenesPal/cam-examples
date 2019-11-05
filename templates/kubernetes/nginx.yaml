@@ -13,10 +13,17 @@ spec:
         run: my-nginx
     spec:
       containers:
-      - name: nginx-{{ service }}
-        image: nginx
-        ports:
-        - containerPort: 80
+        - name: nginx-{{ service }}
+          image: nginx
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: '2m'
+              memory: '5Mi'
+            limits:
+              cpu: '100m'
+              memory: '64Mi'
 ---
 apiVersion: v1
 kind: Service
